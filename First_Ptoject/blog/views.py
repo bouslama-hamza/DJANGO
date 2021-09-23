@@ -1,9 +1,21 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+test = [
+    {
+        'title':'First Title',
+        'Content' : 'First content try'
+    },
+    {
+        'title':'Second Title',
+        'Content' : 'Second content try'
+    }
+]
 
 def home(request):
-    return render(request , 'blog/home.html')
+    cont = {
+        'test' : test
+    }
+    return render(request , 'blog/home.html' , cont)
 
 def about(request):
-    return HttpResponse('<h1>Blog About</h1>')
+    return render(request , 'blog/about.html' , {'title': 'About'})

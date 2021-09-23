@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>First Project</title>
-</head>
-<body>
-    <h1>Blog Home New</h1>
-</body>
-</html>
+{% extends "blog/base.html" %}
+{% block content %}  
+    {% for i in test %}
+        <h1>{{i.title}}</h1>
+        <p>{{i.Content}}</p>
+        <br><br>
+    {% endfor %}
+{% endblock content %}
