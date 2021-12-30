@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<title>Herbaly - {{title}}</title>
+<div class="home_page">
+    <div class="home_page_info">
+        <h4>Welcome To Herbaly Wellness Collection Data Base System</h4>
+        <h5 class="info_suptitile">Helps you convert complex data sum into graphic and numeric output</h5>
+        <a href="{% url 'herbaly-sign-in' %}"><input type="submit" value="Get Started"></a>
+    </div>
+    <div class="home_page_picture">
+        <img src="{% static 'IMAGES/product.png' %}">
+    </div>
+</div>
+{% endblock content %}

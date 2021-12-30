@@ -1,0 +1,45 @@
+{% extends "base_app.html" %}
+{% block test %}
+{% load static %}
+<title>Herbaly - {{title}}</title>
+<div class="app_data">
+    <div class="app_data_title">
+        <h2>Welcome To Hearbly Data System</h2>
+        <h3>We ask you to respect the files mentioned below to get the best results</h3>
+    </div>
+    <div class="app_type">
+        <div class="app_one">
+            <a href="{% url 'herbaly-app' %}">
+                <img src="{% static 'APPLICATION/excel.png' %}">
+                <h3 style="color: white;">Excel Document</h3>
+            </a>
+        </div>
+    </div>
+    <div class="app_type_center">
+        <div class="pulse">
+            <div class="image-upload">
+                <form name="submit" action="{% url 'herbaly-app' %}" method="POST">
+                    {% csrf_token %}
+                    <label for="file-input"><img src="{% static 'IMAGES/data_base_picture.png' %}"/></label>
+                    <input oninput="submit()" name="test" id="file-input" type="file"
+                           style="visibility: hidden; position: absolute;">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="app_type_two">
+        <div class="app_three">
+            <a href="{% url 'herbaly-google-cloud' %}">
+                <img src="{% static 'APPLICATION/google.png' %}">
+                <h3 style="color: white;">Google Cloud</h3>
+            </a>
+        </div>
+        <div class="app_four">
+            <a href="#">
+                <img src="{% static 'APPLICATION/word.png' %}">
+                <h3 style="color: white;">Word Document</h3>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock test %}

@@ -1,0 +1,28 @@
+{% extends "base_app.html" %}
+{% block test %}
+{% load static %}
+<title>Herbaly - {{title}}</title>
+<div class="manage_account_page">
+    <div class="manage_account_title">
+        <h3>General Settings</h3>
+    </div>
+    <div class="manage_account_file">
+        <div class="manage_account_input">
+            {% if message %}
+            <h3 style="color: green;">{{message}}</h3>
+            {% elif error %}
+            <h3 style="color: red;">{{error}}</h3>
+            {% endif %}
+            <form action="{% url 'herbaly-manage-account'%}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Send Validation">
+            </form>
+        </div>
+        <div class="manage_account_picture">
+            <h3>Help You Manage All User Account</h3>
+            <img src="{% static 'IMAGES/data_base.png' %}">
+        </div>
+    </div>
+</div>
+{% endblock test %}

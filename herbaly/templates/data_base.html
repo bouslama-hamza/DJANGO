@@ -1,0 +1,51 @@
+{% extends "base_app.html" %}
+{% block test %}
+{% load static %}
+<title>Herbaly - {{title}}</title>
+<div class="data_base_page">
+    <div class="data_base_ratio">
+        <div class="data_base_amount">
+            {% if data_base %}
+            <h3>Total Amount</h3>
+            <h1>{{data_base.amount}} $</h1>
+            <p>Value Of Total Amount</p>
+        </div>
+        <div class="data_base_client">
+            <h3>Client Number</h3>
+            <h1>{{data_base.client}} C</h1>
+            <p>Total Client Number</p>
+        </div>
+        <div class="data_base_type">
+            <h3>herblyUSD Using times</h3>
+            <h1>{{data_base.herblyUSD}} USD</h1>
+            <p>Total USD Using Times</p>
+        </div>
+        <div class="data_base_aproved">
+            <h3>herblyCAD Using times</h3>
+            <h1>{{data_base.herblyCAD}} CAD</h1>
+            <p>Total CAD Using Times</p>
+        </div>
+        {% endif %}
+    </div>
+    <div class="data_base_plot">
+        <div class="data_base_plt">
+            <div class="data_base_plt_title">
+                <h3>Client Payment Scheme</h3>
+                <p>A graphe that contient all payment amount from all client </p>
+            </div>
+            <div class="data_base_plat">
+                <img src="{% static 'PYPLOT/plot.png' %}">
+            </div>
+        </div>
+        <div class="data_base_pie">
+            <div class="data_base_pie_title">
+                <h3>Payment Type</h3>
+                <p>A graphe that contient the payment Type</p>
+            </div>
+            <div class="data_base_piee">
+                <img src="{% static 'PIEPLOT/pie.png' %}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock test %}

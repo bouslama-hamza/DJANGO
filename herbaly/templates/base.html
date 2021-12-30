@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="{% static 'IMAGES/data_base_picture.png' %}" type="images/x-icon">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/home.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/sign.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/forget_password.css' %}">
+</head>
+<body>
+<header>
+    <div class="first_header">
+        <a href="{% url 'herbaly-home' %}"><img src="{% static 'IMAGES/logo.png' %}"></a>
+        <a href="#">
+            <div class="contact_phone">1-833-643-7225</div>
+        </a>
+        <a href="#">
+            <div class="contact_email">info@herbaly.com</div>
+        </a>
+        <a href="{% url 'herbaly-sign-in' %}">
+            <div class="sign_in">Sign In</div>
+        </a>
+        <a href="{% url 'herbaly-sign-up' %}">
+            <div class="sign_in">Sign Up</div>
+        </a>
+    </div>
+    <div class="second_header">
+        <a href="#">
+            <div class="shop_wellness">Shop Wellness Blends</div>
+        </a>
+        <a href="#">
+            <div class="shop_essential">Shop Essential Oils</div>
+        </a>
+    </div>
+</header>
+{% block content %}
+{% endblock content %}
+<div class="footer">
+    <div class="footer_link">
+        <div class="footer_about">
+            <div class="footer_all"><img src="{% static 'IMAGES/footer-logo.png' %}"></div>
+            <br><br>
+            <p class="footer_info">Blending delicious benefit packedwellness teas.To Your Health.,</p>
+        </div>
+        <div class="footer_useful">
+            <h6 class="footer_all">Explore</h6><br>
+            <a class="footer_info_1" href="#">Account</a><br>
+            <a class="footer_info_1" href="#">Rewards</a><br>
+            <a class="footer_info_1" href="#">Press</a><br>
+            <a class="footer_info_1" href="#">Contact</a><br>
+        </div>
+        <div class="footer_service">
+            <h6 class="footer_all">Community</h6><br>
+            <a class="footer_info_1" href="#">Story</a><br>
+            <a class="footer_info_1" href="#">Blog</a><br>
+            <a class="footer_info_1" href="#">Subscribe & Save</a><br>
+            <a class="footer_info_1" href="#">Refer A Friend</a><br>
+        </div>
+        <div class="footer_contact">
+            <h6 class="footer_all">Contact</h6><br>
+            <div class="footer_info_1">info@herbaly.com</div>
+            <div class="footer_info_1">+1 833 6HERBAL</div>
+            <div class="footer_info_1">Questions?</div>
+        </div>
+    </div>
+    <div class="footer_email">
+        <div class="footer_text">
+            <h6 class="footer_all">Other Questions?</h6><br>
+            <div class="footer_info_1">Please write your email so we can contact you as soon as possible</div>
+        </div>
+        <div class="footer_input">
+            <input class="email_class" type="email" placeholder="Votre Email Adresse" required>
+        </div>
+    </div>
+</div>
+<script src="{% static 'JS/script.js' %}"></script>
+</body>
+</html>

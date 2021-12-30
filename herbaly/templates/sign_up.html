@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<title>Herbaly - {{title}}</title>
+<div class="sign_up_page">
+    <div class="sign_up_input">
+        <form action="{% url 'herbaly-sign-up' %}" method="POST">
+            {% csrf_token %}
+            <div class="sign_up_title">CREATE AN ACCOUNT</div>
+            {% if message%}
+            <p style="color: green;">{{message}}</p>
+            {% endif %}
+            <p>Don't have an account ? , Please write Your email so we can make sure that your are one of our team
+                members</p><br>
+            <input type="email" name="make_email" class="sign_email" placeholder="Your Email" required>
+            <input type="submit" class="submit">
+        </form>
+    </div>
+    <div class="sign_up_img">
+        <img src="{% static 'IMAGES/product.png' %}">
+    </div>
+</div>
+{% endblock content %}

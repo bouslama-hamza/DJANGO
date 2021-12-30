@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<title>Herbaly - {{title}}</title>
+<div class="sign_in_page">
+    <div class="sign_in_picture">
+        <img src="{% static 'IMAGES/employer.png' %}">
+    </div>
+    <div class="sign_in_input">
+        <div class="sign_in_title" style="margin-top: 25%;">LOG OUT SUCCESSFULY</div>
+        <p style="margin-bottom: 5%;">You Have Been Logout Successfuly , You Can Now Go back To The Login Page So That
+            You Can Log In Again</p>
+        <a href="{% url 'herbaly-sign-in'%}" style="color: green;font-size: 25px;">Log In</a>
+    </div>
+</div>
+{% endblock content %}

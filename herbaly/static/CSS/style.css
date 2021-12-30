@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.first_header{
+    border: 1px solid black;
+    height: 120px;
+    background-color: #115F44;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.second_header{
+    border: 1px solid black;
+    height: 60px;
+    background-color: #06AF6E;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+}
+.contact_phone{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+    transition: all 0.1s linear;
+}
+.contact_phone:hover{
+    color: #06AF6E;
+    transition: all 0.1s linear;
+}
+.contact_email{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+    transition: all 0.1s linear;
+}
+.contact_email:hover{
+    color: #06AF6E;
+    transition: all 0.1s linear;
+}
+.sign_in,.log_in{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+    transition: all 0.1s linear;
+}
+.sign_in:hover{
+    color: #06AF6E;
+    transition: all 0.1s linear;
+}
+.second_header{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.shop_wellness{
+    color: white;
+    margin-left: 300px;
+    transition: all 0.1s linear;
+}
+.shop_wellness:hover{
+    color: #115F44;
+    transition: all 0.1s linear;
+}
+.shop_essential{
+    color: white;
+    margin-right: 300px;
+    transition: all 0.1s linear;
+}
+.shop_essential:hover{
+    color: #115F44;
+    transition: all 0.1s linear;
+}

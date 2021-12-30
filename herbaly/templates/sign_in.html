@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<title>Herbaly - Sign In</title>
+<div class="sign_in_page">
+    <div class="sign_in_picture">
+        <img src="{% static 'IMAGES/employer.png' %}">
+    </div>
+    <div class="sign_in_input">
+        <div class="sign_in_title">EMPLOYER LOGIN</div>
+        {% if form.errors %}
+        <h3 style="color: red;">Invalid !! Please Check Your Information and Try again</h3>
+        {% endif %}
+        {% if message %}
+        <p style="color: red;">{{message}}</p>
+        {% elif messages %}
+        <p style="color: green;">{{messages}}</p>
+        {% endif %}
+        <form action="{% url 'herbaly-sign-in' %}" method="POST">
+            {% csrf_token %}
+            <div class="email">{{ form.username }}</div>
+            <div class="password">{{ form.password }}</div>
+            <input class="submit" type="submit" value="Sign In"><br><br><br>
+        </form>
+        <div class="sign_lien">
+            <a href="{% url 'herbaly-sign-up' %}">Don't Have An Account ?</a>
+            <a href="{% url 'herbaly-forget-password' %}">Foget Your Password</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
